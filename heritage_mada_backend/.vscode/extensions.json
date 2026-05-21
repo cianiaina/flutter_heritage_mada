@@ -1,0 +1,6 @@
+{
+	"dart.projectRoots": [
+	  ".",
+	  "heritage_mada_backend"
+	]
+  }

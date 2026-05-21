@@ -1,0 +1,17 @@
+name: heritage_mada_backend
+description: "Le serveur API Dart Frog pour HeritageMada"
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  dart_frog: ^1.1.0
+  # Pour parler à ta base de données PostgreSQL
+  postgres: ^3.0.7
+  # Pour sécuriser tes identifiants de BD
+  dotenv: ^4.2.0
+
+dev_dependencies:
+  test: ^1.24.0
