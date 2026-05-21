@@ -2,7 +2,7 @@ import 'package:latlong2/latlong.dart';
 
 class HeritagePlace {
   final String id;
-  final Map<String, String> name;        // ex: {'mg': 'Ambohimanga', 'fr': 'Le Rova'}
+  final Map<String, String> name;       
   final Map<String, String> description;
   final LatLng location;                 // Coordonnées GPS précises
   final String categoryId;

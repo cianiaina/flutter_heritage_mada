@@ -3,9 +3,9 @@ class Place {
   final String nameFr;
   final String nameMg;
   final String description;
-  final String descriptionMg; // Nouvelle colonne
-  final String category;      // Nouvelle colonne
-  final String imageUrl;      // Nouvelle colonne
+  final String descriptionMg; 
+  final String category;      
+  final String imageUrl;      
   final double longitude;
   final double latitude;
 

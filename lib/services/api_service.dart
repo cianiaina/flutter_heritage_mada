@@ -7,11 +7,11 @@ import 'package:flutter_heritage_mada/models/place_model.dart';
 class ApiService {
   static const String baseUrl = 'http://localhost:8080/api/v1';
 
-  // --- GET : Récupérer tous les sites (Avec Cache Hors-ligne intégré) ---
+  
   Future<List<Place>> fetchPlaces() async {
     final prefs = await SharedPreferences.getInstance();
 
-    // 1. Vérifier si l'appareil a une connexion Internet active
+    //  Vérifier si l'appareil a une connexion Internet active
     final connectivityResult = await Connectivity().checkConnectivity();
     final hasInternet = !connectivityResult.contains(ConnectivityResult.none);
 
@@ -24,7 +24,7 @@ class ApiService {
           // Le serveur a répondu OK, on sauvegarde le JSON brut en local pour plus tard
           await prefs.setString('cached_places', response.body);
 
-          // On décode et on renvoie les objets
+          
           final List<dynamic> body = jsonDecode(response.body);
           return body.map((dynamic item) => Place.fromJson(item)).toList();
         }

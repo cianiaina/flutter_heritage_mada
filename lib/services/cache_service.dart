@@ -5,13 +5,13 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 
 class CacheService {
   final Dio _dio = Dio();
-  // L'adresse de ton serveur Dart Frog (port 8080 par défaut)
+  
   final String _apiUrl = 'http://localhost:8080/api/v1/places';
 
   Future<List<dynamic>> getHeritageData() async {
     final prefs = await SharedPreferences.getInstance();
     
-    // 1. Vérifier si l'appareil a une connexion Internet
+    //  Vérifier si l'appareil a une connexion Internet
     final connectivityResult = await Connectivity().checkConnectivity();
     final hasInternet = !connectivityResult.contains(ConnectivityResult.none);
 
@@ -31,7 +31,7 @@ class CacheService {
       }
     }
 
-    // 2. Mode Hors-ligne ou serveur inaccessible -> Chargement du cache local
+    // 2. Mode Hors-ligne ou serveur inaccessible  Chargement du cache local
     print("Mode hors-ligne activé : Récupération des récits sauvegardés...");
     final String? cachedString = prefs.getString('cached_monuments');
 

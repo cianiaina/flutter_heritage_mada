@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import  'package:flutter_heritage_mada/services/api_service.dart'; // Ajuste le chemin selon ton projet
+import  'package:flutter_heritage_mada/services/api_service.dart'; 
 import 'package:flutter_heritage_mada/models/place_model.dart';
 
 class PlacesListScreen extends StatefulWidget {
@@ -24,7 +24,7 @@ class _PlacesListScreenState extends State<PlacesListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Patrimoine de Madagascar'),
-        backgroundColor: Colors.brown, // Un joli ton chaleureux pour le patrimoine
+        backgroundColor: Colors.brown, 
       ),
       body: FutureBuilder<List<Place>>(
         future: _placesFuture,
